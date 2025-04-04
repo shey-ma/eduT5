@@ -1,85 +1,245 @@
-/* Couleurs pastel élégantes */
-:racine {
---rose: #F7C8E0;
---bleu: #AEE2FF;
---vert: #C5FAD5;
---jaune: #FFF5BA;
---texte: #333;
---fond: #fdfdfd;
-}
-
+/* Style général pour le corps */
 corps {
+famille de polices : « Minecraft », Arial, sans-serif ;
 marge : 0 ;
-famille de polices : « Segoe UI », sans-serif ;
-couleur d'arrière-plan : var(--fond);
-couleur : var(--texte);
+remplissage : 0 ;
+couleur d'arrière-plan : #2c2c2c ; /* Fond sombre pour un effet plus immersif */
+image d'arrière-plan : url('minecraft_texture.jpg');
+taille de l'arrière-plan : couverture ;
+flou d'arrière-plan : 5 px ; /* Légère flou pour un effet de profondeur */
+couleur : #e6e6e6 ; /* Texte clair pour une meilleure lisibilité */
+affichage : flex ;
+flex-direction : colonne ;
+align-items : centre ; /* Centrer le contenu horizontalement */
+justifier-contenu : centre ; /* Centrer le contenu verticalement */
+hauteur min : 100 vh ; /* Assure que le contenu prend au moins la hauteur de l'écran */
+overflow-x : caché ; /* Empêche le défilement horizontal */
 }
 
-/* EN-TÊTE */
+/* Style pour l'en-tête */
 en-tête {
-arrière-plan : dégradé linéaire (à droite, var (--bleu), var (--rose));
+arrière-plan : dégradé linéaire (135 degrés, #4e4e4e, #3b3b3b) ;
+couleur : #ffffff;
 remplissage : 20px 0 ;
 alignement du texte : centre ;
-boîte-ombre : 0 4px 6px rgba(0,0,0,0.1);
+box-shadow : 0px 4px 15px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
+bordure inférieure : 4 px solide #2f2f2f ;
+largeur : 100 % ; /* Assure que l'en-tête prend toute la largeur */
 }
 
-en-tête h1 {
-marge : 0 ;
-taille de police : 2,5 em ;
-couleur : #fff;
-}
-
-/* MENU */
-navigation ul {
-style de liste : aucun ;
-remplissage : 0 ;
-marge : 15px 0 0 ;
+/* Barre de navigation */
+.barre de navigation {
 affichage : flex ;
 justifier-contenu : centre ;
-flex-wrap : envelopper ;
+espace : 20 px ;
+remplissage : 10px 0 ;
+largeur : 100 % ; /* Barre de navigation centrale */
 }
 
-nav ul li {
-marge : 0 12px ;
-}
-
-nav ul li a {
+.barre de navigation a {
+couleur : #ffffff;
 décoration de texte : aucune ;
-couleur : #fff;
+remplissage : 12px 18px ;
+rayon de bordure : 8 px ;
+arrière-plan : #5e5e5e ; /* Apparence de bloc avec un dégradé léger */
 font-weight: gras;
-rembourrage : 8px 14px ;
-rayon de bordure : 6 px ;
-transition : couleur d'arrière-plan 0,3 s ;
+transition : couleur d'arrière-plan 0,3 s, transformation 0,3 s ;
 }
 
-nav ul li a:hover {
-couleur d'arrière-plan : rgba(255, 255, 255, 0,2);
+.navbar a:hover {
+couleur d'arrière-plan : #3b3b3b ;
+transformer : échelle(1,05);
 }
 
-/* SECTION PRINCIPALE */
-principal {
-remplissage : 50px 20px ;
+/* Section d'introduction */
+.introduction {
+remplissage : 25 px ;
 alignement du texte : centre ;
+couleur d'arrière-plan : rgba (220, 220, 220, 0,8) ; /* Teinte plus claire et transparente */
+marge : 20px auto ;
+rayon de la bordure : 12 px ;
+boîte-ombre : 0 0 15px rgba(0, 0, 0, 0.4);
+bordure : 2px solide #8b8b8b ;
+largeur maximale : 800 px ; /* Limite la largeur de l'intro */
+largeur : 100 % ; /* Pour que l'intro prenne la largeur de l'écran jusqu'à la limite */
 }
 
-.intro h2 {
-couleur : var(--bleu);
-taille de police : 1,8 em ;
+/* Nouveau style pour le rectangle avec le texte */
+.texte d'introduction {
+image d'arrière-plan : url('imgo1.jpg');
+taille de l'arrière-plan : couverture ;
+position d'arrière-plan : centre ;
+couleur : #ffffff;
+remplissage : 40 px ;
+rayon de la bordure : 12 px ;
+box-shadow : 0 0 20px rgba(0, 0, 0, 0.4); /* Ombre accentuée */
+transition : transformation 0,3 s ;
+largeur maximale : 700 px ; /* Limite la largeur du texte */
+marge : auto ; /* Centre le rectangle */
 }
 
-.intro p {
-taille de police : 1,2 em ;
-largeur maximale : 700 px ;
-marge : 0 auto ;
+.texte d'introduction : hover {
+transformer : translateY(-5px);
 }
 
-/* PIED DE PAGE */
-pied de page {
-couleur d'arrière-plan : var(--vert);
+/* Section des fonctionnalités */
+.caractéristiques {
+remplissage : 20 px ;
+couleur d'arrière-plan : rgba(226, 226, 226, 0,9) ; /* Teinte plus légère pour séparer les sections */
+rayon de la bordure : 12 px ;
+marge : 20px auto ;
+bordure : 2px solide #8b8b8b ;
+largeur maximale : 1 000 px ; /* Limite la largeur */
+largeur : 100 % ; /* Pour s'assurer qu'elle s'adapte */
+}
+
+/* Conteneur pour les fonctionnalités */
+.conteneur de fonctionnalités {
+affichage : flex ;
+flex-wrap : envelopper ;
+espace : 20 px ;
+justify-content: center; /* Centrer les éléments */
+align-items : flex-start ;
+}
+
+/* Style pour chaque élément de fonctionnalité */
+.élément-fonctionnalité {
+arrière-plan : #d6d6d6 ; /* Couleur gris clair avec une texture de fond */
+remplissage : 20 px ;
+largeur : 220px ;
+rayon de bordure : 8 px ;
 alignement du texte : centre ;
-remplissage : 15 px ;
-marge supérieure : 50 px ;
-couleur : #444;
+position : relative ;
+boîte-ombre : 0 0 8px rgba(0, 0, 0, 0.2);
+transition : transformation 0,2 s, ombre de boîte 0,2 s ;
+}
+
+.élément-fonctionnalité:hover {
+transformer : translateY(-5px);
+boîte-ombre : 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Style pour les flèches */
+.flèche {
+taille de police : 2 em ;
+marge : 0 10px ;
+couleur : #7e7e7e ; /* Gris moyen pour contraste */
+}
+
+/* Description de chaque fonctionnalité */
+.description {
+affichage : aucun ;
 taille de police : 0,9 em ;
-bordure supérieure : 1 px solide #ccc ;
+couleur : #333;
+position : absolue ;
+bas : -40px ;
+gauche : 50 % ;
+transformer : translateX(-50%);
+arrière-plan : #ffffff;
+rembourrage : 8px 12px ;
+bordure : 1px solide #ccc ;
+rayon de bordure : 5 px ;
+boîte-ombre : 0px 4px 10px rgba(0, 0, 0, 0.1);
+largeur : 90 % ;
+}
+
+/* Affichage de la description sur le survol */
+.élément-fonctionnalité : hover .description {
+affichage : bloc ;
+}
+
+/* Style pour le profil utilisateur */
+.profil-utilisateur {
+couleur d'arrière-plan : #fff ;
+remplissage : 25 px ;
+rayon de la bordure : 12 px ;
+alignement du texte : centre ;
+boîte-ombre : 0px 0px 8px rgba(0, 0, 0, 0.2);
+marge : 20px auto ;
+largeur : 90 % ;
+largeur maximale : 320 px ;
+}
+
+/* Style pour l'image de profil */
+.image de profil utilisateur {
+largeur : 120px ;
+hauteur : 120px ;
+rayon de bordure : 50 % ;
+marge inférieure : 10 px ;
+}
+
+/* Style pour le nom de l'utilisateur */
+.profil utilisateur h2 {
+taille de police : 1,6 em ;
+couleur : #333;
+marge : 10px 0 ;
+}
+
+/* Style pour le bouton de message */
+.profil utilisateur .message-btn {
+couleur d'arrière-plan : #4e4e4e ;
+couleur : #ffffff;
+remplissage : 12px 18px ;
+rayon de bordure : 5 px ;
+décoration de texte : aucune ;
+affichage : bloc en ligne ;
+marge supérieure : 10 px ;
+transition : couleur d'arrière-plan 0,3 s, transformation 0,3 s ;
+}
+
+.profil utilisateur .message-btn:hover {
+couleur d'arrière-plan : #2b2b2b ;
+transformer : échelle(1,05);
+}
+
+/* Style pour le conteneur de chat */
+.conteneur de chat {
+largeur : 90 % ;
+largeur maximale : 600 px ;
+marge : 20px auto ;
+couleur d'arrière-plan : #fff ;
+rayon de bordure : 12 px ;
+boîte-ombre : 0px 0px 8px rgba(0, 0, 0, 0.3);
+remplissage : 25 px ;
+}
+
+/* Style pour la zone de chat */
+.boîte de discussion {
+hauteur : 200px ;
+débordement-y : auto ;
+marge inférieure : 10 px ;
+bordure : 1px solide #ccc ;
+remplissage : 12 px ;
+rayon de bordure : 5 px ;
+couleur d'arrière-plan : #f9f9f9 ;
+boîte-ombre : insertion 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour le formulaire de chat */
+.chat-form input[type="text"] {
+largeur : 75 % ;
+remplissage : 12 px ;
+rayon de bordure : 5 px ;
+bordure : 1px solide #ccc ;
+transition : couleur de bordure 0,3 s ;
+}
+
+.chat-form input[type="text"]:focus {
+couleur de bordure : #4e4e4e ;
+}
+
+.bouton de formulaire de discussion {
+largeur : 20 % ;
+remplissage : 12 px ;
+couleur d'arrière-plan : #4e4e4e ;
+couleur : #fff;
+rayon de bordure : 5 px ;
+bordure : aucune ;
+curseur : pointeur ;
+transition : couleur d'arrière-plan 0,3 s, transformation 0,3 s ;
+}
+
+.bouton de formulaire de discussion : hover {
+couleur d'arrière-plan : #2b2b2b ;
+transformer : échelle(1,05);
 }
