@@ -1,0 +1,85 @@
+/* Couleurs pastel élégantes */
+:racine {
+--rose: #F7C8E0;
+--bleu: #AEE2FF;
+--vert: #C5FAD5;
+--jaune: #FFF5BA;
+--texte: #333;
+--fond: #fdfdfd;
+}
+
+corps {
+marge : 0 ;
+famille de polices : « Segoe UI », sans-serif ;
+couleur d'arrière-plan : var(--fond);
+couleur : var(--texte);
+}
+
+/* EN-TÊTE */
+en-tête {
+arrière-plan : dégradé linéaire (à droite, var (--bleu), var (--rose));
+remplissage : 20px 0 ;
+alignement du texte : centre ;
+boîte-ombre : 0 4px 6px rgba(0,0,0,0.1);
+}
+
+en-tête h1 {
+marge : 0 ;
+taille de police : 2,5 em ;
+couleur : #fff;
+}
+
+/* MENU */
+navigation ul {
+style de liste : aucun ;
+remplissage : 0 ;
+marge : 15px 0 0 ;
+affichage : flex ;
+justifier-contenu : centre ;
+flex-wrap : envelopper ;
+}
+
+nav ul li {
+marge : 0 12px ;
+}
+
+nav ul li a {
+décoration de texte : aucune ;
+couleur : #fff;
+font-weight: gras;
+rembourrage : 8px 14px ;
+rayon de bordure : 6 px ;
+transition : couleur d'arrière-plan 0,3 s ;
+}
+
+nav ul li a:hover {
+couleur d'arrière-plan : rgba(255, 255, 255, 0,2);
+}
+
+/* SECTION PRINCIPALE */
+principal {
+remplissage : 50px 20px ;
+alignement du texte : centre ;
+}
+
+.intro h2 {
+couleur : var(--bleu);
+taille de police : 1,8 em ;
+}
+
+.intro p {
+taille de police : 1,2 em ;
+largeur maximale : 700 px ;
+marge : 0 auto ;
+}
+
+/* PIED DE PAGE */
+pied de page {
+couleur d'arrière-plan : var(--vert);
+alignement du texte : centre ;
+remplissage : 15 px ;
+marge supérieure : 50 px ;
+couleur : #444;
+taille de police : 0,9 em ;
+bordure supérieure : 1 px solide #ccc ;
+}
