@@ -2,100 +2,63 @@
 <!DOCTYPE html>
 <html lang="fr">
 <tête>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="EduT5 est une plateforme éducative collaborative pour la Terminale 5 du lycée André Malraux.">
-<meta name="keywords" content="EduT5, révisions bac, maths, SVT, physique, SES, HGGSP, AMC, espagnol, lycée">
-<meta name="author" content="Sheyma">
-<meta name="robots" content="index, follow">
-<title>EduT5 - Accueil</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EduT5</title>
+<link rel="stylesheet" href="style.css" />
 </head>
-<corps>
+<body class="light-theme">
+
 <en-tête>
-<img src="images/logo_edut5.png" alt="Logo EduT5" class="logo">
+<h1>Bienvenue sur EduT5</h1>
+<div class="theme-toggle">
+<étiquette>
+<input type="checkbox" id="toggle-theme" />
+Mode sombre
+</label>
+</div>
+<nav class="navbar">
+<a href="#">Accueil</a>
+<a href="#">Ressources</a>
+<a href="#">Chat</a>
+<a href="#">Profil</a>
+</nav>
 </header>
 
-<div class="navbar">
-<a href="index.html">Accueil</a>
-<a href="ressources.html">Ressources</a>
-<a href="forum.html">Forum</a>
-<a href="contact.html">Contact</a>
-<a href="apropos.html">À propos</a>
+<principal>
+<section class="intro">
+<div class="intro-text">
+<h2>Un espace pour réussir ensemble le Bac</h2>
+<p>Partage de cours, fiches, quiz, discussions et entrée entre élèves et profs.</p>
 </div>
+</section>
 
-<h1>Bienvenue sur EduT5</h1>
+<section class="features">
+<h2>Ressources par matière</h2>
+<ul id="resource-list"></ul>
+<div id="pagination"></div>
+</section>
 
-<div class="intro">
-<p>EduT5 est votre plateforme d'entraide pour réussir le bac ! Retrouvez toutes vos spécialités, partagez vos fiches et révisez ensemble.</p>
-</div>
+<section class="chat-container">
+<h2>Chat en direct</h2>
+<div id="chat-box" class="chat-box"></div>
+<form id="chat-form" class="chat-form">
+<input type="text" id="chat-message" placeholder="Écris ton message..." />
+<button type="submit">Envoyé</button>
+</form>
+</section>
 
-<div class="container">
-<div class="card">
-<div class="icon"><img src="images/math_icon.png" alt="Icône Mathématiques"></div>
-<h3>Mathématiques ➕</h3>
-<p>Fiches, exercices et astuces pour cartonner en maths !</p>
-<a href="maths.html" class="btn">Accéder</a>
-</div>
+<section class="profil-utilisateur">
+<img src="profil.png" alt="Photo de profil">
+<h2>Mon profil</h2>
+<form id="profile-form">
+<input type="text" id="profile-name" placeholder="Nom" requis />
+<input type="email" id="profile-email" placeholder="E-mail" obligatoire />
+<button type="submit" class="message-btn">Mettre à jour</button>
+</form>
+</section>
+</main>
 
-<div class="card">
-<div class="icon"><img src="images/svt_icon.png" alt="Icône SVT"></div>
-<h3>SVT 🌱</h3>
-<p>La science du vivant, du corps humain à l'écosystème.</p>
-<a href="svt.html" class="btn">Accéder</a>
-</div>
-
-<div class="card">
-<div class="icon"><img src="images/physique_icon.png" alt="Icône Physique-Chimie"></div>
-<h3>Physique-Chimie ⚛️</h3>
-<p>Comprendre le monde avec des lois, des réactions et des expériences !</p>
-<a href="physique.html" class="btn">Accéder</a>
-</div>
-
-<div class="card">
-<div class="icon"><img src="images/ses_icon.png" alt="Icône SES"></div>
-<h3>SES 💸</h3>
-<p>Les clés pour analyser la société et l'économie.</p>
-<a href="ses.html" class="btn">Accéder</a>
-</div>
-
-<div class="card">
-<div class="icon"><img src="images/hggsp_icon.png" alt="Icône HGGSP"></div>
-<h3>HGGSP 🌍</h3>
-<p>Explorez l'histoire, la géopolitique et les grands enjeux du monde.</p>
-<a href="hggsp.html" class="btn">Accéder</a>
-</div>
-
-<div class="card">
-<div class="icon"><img src="images/amc_icon.png" alt="Icône AMC"></div>
-<h3>AMC 🇬🇧</h3>
-<p>Analyse du monde contemporain en anglais : culture et actu !</p>
-<a href="amc.html" class="btn">Accéder</a>
-</div>
-
-<div class="card">
-<div class="icon"><img src="images/espagnol_icon.png" alt="Icône Espagnol"></div>
-<h3>Espagnol 🇪🇸</h3>
-<p>Perfectionne ton espagnol avec des ressources amusantes et utiles.</p>
-<a href="espagnol.html" class="btn">Accéder</a>
-</div>
-
-<div class="card">
-<div class="icon"><img src="images/conseils_icon.png" alt="Icône Conseils"></div>
-<h3>Conseils ✨</h3>
-<p>Organisation, méthode de travail, motivation... tout pour réussir !</p>
-<a href="conseils.html" class="btn">Accéder</a>
-</div>
-</div>
-
-<div class="features">
-<h2>Fonctionnalités</h2>
-<div class="tags">
-<div class="tag">Fiches collaboratives</div>
-<div class="tag">Quiz de révision</div>
-<div class="tag">Espace profs/élèves</div>
-<div class="tag">Méthodologie</div>
-</div>
-</div>
+<script src="script.js"></script>
 </body>
 </html>
