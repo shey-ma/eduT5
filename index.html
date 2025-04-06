@@ -2,71 +2,253 @@
 <!DOCTYPE html>
 <html lang="fr">
 <tête>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>EduT5 - Accueil</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="STL Pocket est une plateforme éducative interactive dédiée aux étudiants en sciences. Apprenez à votre rythme avec des cours variés et des outils innovants.">
+<meta name="keywords" content="STL Pocket, révisions, biotechnologie, physique, chimie, mathématiques, sciences, plateforme éducative">
+<meta name="author" content="Adam Bastien">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="STL Pocket - Accueil">
+<meta property="og:description" content="STL Pocket est une plateforme éducative interactive dédiée aux étudiants en sciences. Apprenez à votre rythme avec des cours variés et des outils innovants.">
+<meta property="og:image" content="images/logo.png">
+<meta property="og:url" content=" https://www.stlpocket.com ">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="STL Pocket - Accueil">
+<meta name="twitter:description" content="STL Pocket est une plateforme éducative interactive dédiée aux étudiants en sciences. Apprenez à votre rythme avec des cours variés et des outils innovants.">
+<meta name="twitter:image" content="images/logo.png">
+<title>STL Pocket - Accueil</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* Style général de la page */
+corps {
+famille de polices : « Minecraft », sans-serif ;
+couleur d'arrière-plan : #000033 ;
+couleur : #b3c7e6 ;
+marge : 0 ;
+affichage : flex ;
+flex-direction : colonne ;
+align-items: centre;
+image d'arrière-plan : url('images/space_background.png');
+taille de l'arrière-plan : couverture ;
+position d'arrière-plan : centre ;
+}
 
-<!-- Lien vers le fichier CSS -->
-<link rel="stylesheet" href="style.css" />
+/* En-tête */
+en-tête {
+remplissage : 15 px ;
+affichage : flex ;
+justifier-contenu : centre ;
+largeur : 100 % ;
+arrière-plan : rgba(0, 0, 51, 0.6);
+boîte-ombre : 0px 4px 8px rgba(0, 0, 51, 0.4);
+}
 
-<!-- Supabase JS CDN -->
-<script src=" https://cdn.jsdelivr.net/npm/@supabase/supabase-js "></script>
+.logo {
+largeur : 200px ;
+hauteur : auto ;
+}
+
+/* Barre de navigation */
+.barre de navigation {
+affichage : flex ;
+justifier-contenu : espace-autour ;
+largeur : 100 % ;
+remplissage : 15 px ;
+couleur-arrière-plan : #0033cc ; /* Bleu vif */
+couleur : #ffffff;
+taille de police : 1,2 em ;
+}
+
+.barre de navigation a {
+couleur : #ffffff;
+décoration de texte : aucune ;
+font-weight: gras;
+remplissage : 10 px ;
+couleur d'arrière-plan : rgba(0, 0, 51, 0,7) ; /* Fond bleu foncé translucide pour les liens */
+rayon de bordure : 8 px ;
+boîte-ombre : 2px 2px 5px rgba(0, 0, 51, 0.3);
+transition : couleur d'arrière-plan 0,3 s de facilité, transformation 0,3 s de facilité ;
+}
+
+.navbar a:hover {
+couleur d'arrière-plan : #001a66 ; /* Bleu plus foncé au survol */
+transformation : échelle (1.1); /* Zoom léger au survol */
+}
+
+/* Titre principal */
+h1 {
+taille de police : 3 em ;
+couleur : #3399ff ;
+alignement du texte : centre ;
+texte-ombre : 3px 3px 8px #000033 ;
+marge : 30px ;
+}
+
+/* Conteneur principal */
+.conteneur {
+affichage : grille ;
+grid-template-columns : répéter(remplissage automatique, minmax(250px, 1fr));
+espace : 20 px ;
+largeur maximale : 1 200 px ;
+largeur : 100 % ;
+remplissage : 20 px ;
+}
+
+/* Style des cartes */
+.carte {
+couleur d'arrière-plan : rgba(0, 0, 51, 0,7) ;
+rayon de bordure : 15 px ;
+boîte-ombre : 0px 4px 12px rgba(0, 0, 51, 0.2);
+remplissage : 20 px ;
+alignement du texte : centre ;
+bordure : 2px solide #0033cc ;
+transition : transformation 0,3 s de facilité, boîte-ombre 0,3 s de facilité ;
+}
+
+.card:hover {
+boîte-ombre : 0px 8px 16px rgba(0, 0, 51, 0.4);
+transformer : échelle(1,05);
+}
+
+.icône img {
+largeur : 60px ;
+hauteur : 60px ;
+marge inférieure : 10 px ;
+}
+
+/* Boutons */
+.btn {
+couleur d'arrière-plan : #0033cc ;
+couleur : #ffffff;
+bordure : aucune ;
+remplissage : 10px 20px ;
+rayon de bordure : 25 px ;
+curseur : pointeur ;
+famille de polices : « Minecraft », sans-serif ;
+boîte-ombre : 2px 2px 5px rgba(0, 0, 51, 0.3);
+transition : couleur d'arrière-plan 0,3 s de facilité, ombre de boîte 0,3 s de facilité ;
+}
+
+.btn:hover {
+couleur d'arrière-plan : #001a66 ;
+boîte-ombre : 2px 2px 10px rgba(0, 0, 51, 0.5);
+}
+
+/* Présentation de la section */
+.introduction {
+remplissage : 30 px ;
+image d'arrière-plan : url('images/feature_background.jpg');
+taille de l'arrière-plan : couverture ;
+position d'arrière-plan : centre ;
+rayon de bordure : 10 px ;
+boîte-ombre : 0px 4px 8px rgba(0, 0, 51, 0.3);
+alignement du texte : centre ;
+largeur maximale : 800 px ;
+marge : 30px auto ;
+}
+
+.intro p {
+taille de police : 1,5 em ;
+couleur : #ffffff;
+font-weight: gras;
+texte-ombre : 2px 2px 5px rgba(0, 0, 51, 0.5);
+}
+
+/* Fonctionnalités */
+.caractéristiques {
+alignement du texte : centre ;
+largeur : 100 % ;
+couleur d'arrière-plan : rgba(0, 0, 51, 0,7) ;
+remplissage : 40 px ;
+rayon de bordure : 15 px ;
+marge supérieure : 30 px ;
+boîte-ombre : 0px 4px 12px rgba(0, 0, 51, 0.3);
+}
+
+.caractéristiques h2 {
+taille de police : 2,5 em ;
+couleur : #3399ff ;
+texte-ombre : 3px 3px 8px #000033 ;
+}
+
+.tags {
+affichage : flex ;
+justifier-contenu : centre ;
+flex-wrap : envelopper ;
+espace : 10 px ;
+marge supérieure : 10 px ;
+}
+
+.étiqueter {
+couleur d'arrière-plan : #004080 ;
+couleur : #ffffff;
+rembourrage : 8px 16px ;
+rayon de la bordure : 12 px ;
+taille de police : 0,9 em ;
+curseur : pointeur ;
+}
+
+.tag:hover {
+couleur d'arrière-plan : #3399ff ;
+}
+</style>
 </head>
 <corps>
-
 <en-tête>
-<h1>Bienvenue sur EduT5</h1>
-<nav class="navbar">
-<a href="#">Accueil</a>
-<a href="#">Cours</a>
-<a href="#">Ressources</a>
-<a href="#">Chat</a>
-<a href="#">Profil</a>
-</nav>
-<button id="theme-toggle">Changer de thème</button>
+<img src="images/logo.png" alt="Logo STL Pocket" class="logo">
 </header>
 
-<section class="intro">
-<div class="intro-text">
-<h2>Un site collaboratif pour réussir le bac</h2>
-<p>Partage de cours, quiz, conseils et chat en direct entre élèves et professeurs.</p>
+<div class="navbar">
+<a href="index.html">Accueil 🏠</a>
+<a href="resources.html">Ressources 📚</a>
+<a href="forum.html">Forum 💬</a>
+<a href="contact.html">Contact 📞</a>
+<a href="creators.html">Créateurs 👨‍💻👩‍💻</a>
 </div>
-</section>
 
-<section class="features">
-<h2>Ressources par matière</h2>
-<ul id="resource-list"></ul>
-<div id="pagination"></div>
-</section>
+<h1>Bienvenue sur STL Pocket 🌟</h1>
 
-<section class="chat-container">
-<h2>Chat en direct</h2>
-<div class="chat-box" id="chat-box"></div>
-<form class="chat-form" id="chat-form">
-<input type="text" id="chat-message" placeholder="Votre message...">
-<button type="submit">Envoyé</button>
-</form>
-</section>
+<div class="intro">
+<p>STL Pocket est votre plateforme d'apprentissage accessible et interactive ! Explorez nos différentes matières et améliorez vos compétences 🎓🚀.</p>
+</div>
 
-<section class="profil-utilisateur">
-<img src="avatar.png" alt="Profil utilisateur">
-<h2>Nom d'utilisateur</h2>
-<form id="profile-form">
-<input type="text" id="profile-name" placeholder="Nom">
-<input type="email" id="profile-email" placeholder="E-mail">
-<button type="submit" class="message-btn">Mettre à jour</button>
-</form>
-</section>
+<div class="container">
+<div class="card">
+<div class="icon"><img src="images/physique_icon.png" alt="Icône Physique-Chimie"></div>
+<h3>Physique-Chimie ⚡🧪</h3>
+<p>Expérimentez et comprenez les lois de la physique et de la chimie appliquées 🔬.</p>
+<a href="physique.html" class="btn">Accéder 🔝</a>
+</div>
+<div class="card">
+<div class="icon"><img src="images/biotech_icon.png" alt="Icône Biotechnologie"></div>
+<h3>Biotechnologie 🧬</h3>
+<p>Découvrez comment les sciences appliquées transforment la biologie en technologie 🔧💡.</p>
+<a href="biotech.html" class="btn">Accéder 🔝</a>
+</div>
+<div class="card">
+<div class="icon"><img src="images/math_icon.png" alt="Icône Mathématiques"></div>
+<h3>Mathématiques ➗</h3>
+<p>Renforcez vos bases en mathématiques et résolvez des problèmes complexes 📊.</p>
+<a href="math.html" class="btn">Accéder 🔝</a>
+</div>
+<div class="card">
+<div class="icon"><img src="images/lab_icon.png" alt="Icône Science de Laboratoire"></div>
+<h3>Science de Laboratoire 🔬</h3>
+<p>Venez découvrir les expériences de laboratoire les plus fascinantes !</p>
+<a href="lab.html" class="btn">Accéder au labo 🔬</a>
+</div>
+</div>
 
-<!-- Clé Supabase (à remplacer par la tienne) -->
-<script>
-const supabase = supabase.createClient(
-" https://your-project-url.supabase.co ",
-"votre-clé-anonyme"
-);
-</script>
+<div class="features">
+<h2>Fonctionnalités 🔧</h2>
+<div class="tags">
+<div class="tag">Exercices Interactifs</div>
+<div class="tag">Quiz en Temps Réel</div>
+<div class="tag">Messagerie entre étudiants</div>
+<div class="tag">Tableau de bord personnalisé</div>
+</div>
+</div>
 
-<!-- Lien vers ton fichier JavaScript -->
-<script src="script.js"></script>
 </body>
 </html>
