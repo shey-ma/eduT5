@@ -4,32 +4,32 @@
 <tête>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>EduT5</title>
+<title>EduT5 - Accueil</title>
+
+<!-- Lien vers le fichier CSS -->
 <link rel="stylesheet" href="style.css" />
+
+<!-- Supabase JS CDN -->
+<script src=" https://cdn.jsdelivr.net/npm/@supabase/supabase-js "></script>
 </head>
-<body class="light-theme">
+<corps>
 
 <en-tête>
 <h1>Bienvenue sur EduT5</h1>
-<div class="theme-toggle">
-<étiquette>
-<input type="checkbox" id="toggle-theme" />
-Mode sombre
-</label>
-</div>
 <nav class="navbar">
 <a href="#">Accueil</a>
+<a href="#">Cours</a>
 <a href="#">Ressources</a>
 <a href="#">Chat</a>
 <a href="#">Profil</a>
 </nav>
+<button id="theme-toggle">Changer de thème</button>
 </header>
 
-<principal>
 <section class="intro">
 <div class="intro-text">
-<h2>Un espace pour réussir ensemble le Bac</h2>
-<p>Partage de cours, fiches, quiz, discussions et entrée entre élèves et profs.</p>
+<h2>Un site collaboratif pour réussir le bac</h2>
+<p>Partage de cours, quiz, conseils et chat en direct entre élèves et professeurs.</p>
 </div>
 </section>
 
@@ -41,24 +41,32 @@ Mode sombre
 
 <section class="chat-container">
 <h2>Chat en direct</h2>
-<div id="chat-box" class="chat-box"></div>
-<form id="chat-form" class="chat-form">
-<input type="text" id="chat-message" placeholder="Écris ton message..." />
+<div class="chat-box" id="chat-box"></div>
+<form class="chat-form" id="chat-form">
+<input type="text" id="chat-message" placeholder="Votre message...">
 <button type="submit">Envoyé</button>
 </form>
 </section>
 
 <section class="profil-utilisateur">
-<img src="profil.png" alt="Photo de profil">
-<h2>Mon profil</h2>
+<img src="avatar.png" alt="Profil utilisateur">
+<h2>Nom d'utilisateur</h2>
 <form id="profile-form">
-<input type="text" id="profile-name" placeholder="Nom" requis />
-<input type="email" id="profile-email" placeholder="E-mail" obligatoire />
+<input type="text" id="profile-name" placeholder="Nom">
+<input type="email" id="profile-email" placeholder="E-mail">
 <button type="submit" class="message-btn">Mettre à jour</button>
 </form>
 </section>
-</main>
 
+<!-- Clé Supabase (à remplacer par la tienne) -->
+<script>
+const supabase = supabase.createClient(
+" https://your-project-url.supabase.co ",
+"votre-clé-anonyme"
+);
+</script>
+
+<!-- Lien vers ton fichier JavaScript -->
 <script src="script.js"></script>
 </body>
 </html>
