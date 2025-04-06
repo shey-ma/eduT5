@@ -1,145 +1,246 @@
 
-:racine {
---background-light: #fdf6f0;
---text-light: #2c2c2c;
---accent-light: #f9a8d4;
---card-light: #fff;
---ombre-lumière : rgba(0, 0, 0, 0.1);
-
---background-dark: #2c2c2c;
---text-dark: #fdf6f0;
---accent-dark: #ffb6c1;
---card-dark: #3a3a3a;
---shadow-dark: rgba(255, 255, 255, 0.05);
-}
-
+/* Style général pour le corps */
 corps {
-famille de polices : « Segoe UI », sans-serif ;
+famille de polices : « Minecraft », Arial, sans-serif ;
 marge : 0 ;
 remplissage : 0 ;
-transition : couleur d'arrière-plan 0,4 s, couleur 0,4 s ;
+couleur d'arrière-plan : #2c2c2c ; /* Fond sombre pour un effet plus immersif */
+image d'arrière-plan : url('minecraft_texture.jpg');
+taille de l'arrière-plan : couverture ;
+flou d'arrière-plan : 5 px ; /* Légère flou pour un effet de profondeur */
+couleur : #e6e6e6 ; /* Texte clair pour une meilleure lisibilité */
+affichage : flex ;
+flex-direction : colonne ;
+align-items : centre ; /* Centrer le contenu horizontalement */
+justifier-contenu : centre ; /* Centrer le contenu verticalement */
+hauteur min : 100 vh ; /* Assure que le contenu prend au moins la hauteur de l'écran */
+overflow-x : caché ; /* Empêche le défilement horizontal */
 }
 
-thème corps.lumière {
-couleur d'arrière-plan : var(--background-light);
-couleur : var(--text-light);
-}
-
-corps.thème sombre {
-couleur d'arrière-plan : var(--background-dark);
-couleur : var(--text-dark);
-}
-
+/* Style pour l'en-tête */
 en-tête {
-arrière-plan : var(--accent-light);
-remplissage : 20 px ;
+arrière-plan : dégradé linéaire (135 degrés, #4e4e4e, #3b3b3b) ;
+couleur : #ffffff;
+remplissage : 20px 0 ;
 alignement du texte : centre ;
-boîte-ombre : 0 4px 10px var(--ombre-lumière);
-transition : arrière-plan 0,4 s ;
+box-shadow : 0px 4px 15px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
+bordure inférieure : 4 px solide #2f2f2f ;
+largeur : 100 % ; /* Assure que l'en-tête prend toute la largeur */
 }
 
-en-tête body.dark-theme {
-arrière-plan : var(--accent-dark);
-boîte-ombre : 0 4px 10px var(--shadow-dark);
-}
-
+/* Barre de navigation */
 .barre de navigation {
 affichage : flex ;
 justifier-contenu : centre ;
 espace : 20 px ;
-marge supérieure : 10 px ;
+remplissage : 10px 0 ;
+largeur : 100 % ; /* Barre de navigation centrale */
 }
 
 .barre de navigation a {
-arrière-plan : var(--card-light);
-couleur : var(--text-light);
+couleur : #ffffff;
 décoration de texte : aucune ;
-remplissage : 10px 16px ;
+remplissage : 12px 18px ;
 rayon de bordure : 8 px ;
+arrière-plan : #5e5e5e ; /* Apparence de bloc avec un dégradé léger */
 font-weight: gras;
-transition : couleur d'arrière-plan 0,3 s ;
-}
-
-corps.thème sombre .barre de navigation a {
-arrière-plan : var(--card-dark);
-couleur : var(--text-dark);
+transition : couleur d'arrière-plan 0,3 s, transformation 0,3 s ;
 }
 
 .navbar a:hover {
-couleur d'arrière-plan : var(--accent-light);
+couleur d'arrière-plan : #3b3b3b ;
+transformer : échelle(1,05);
 }
 
-.intro, .fonctionnalités, .conteneur de discussion, .profil utilisateur {
-couleur d'arrière-plan : var(--card-light);
-rayon de bordure : 10 px ;
-boîte-ombre : 0 2px 8px var(--ombre-lumière);
-marge : 30px auto ;
+/* Section d'introduction */
+.introduction {
 remplissage : 25 px ;
+alignement du texte : centre ;
+couleur d'arrière-plan : rgba (220, 220, 220, 0,8) ; /* Teinte plus claire et transparente */
+marge : 20px auto ;
+rayon de la bordure : 12 px ;
+boîte-ombre : 0 0 15px rgba(0, 0, 0, 0.4);
+bordure : 2px solide #8b8b8b ;
+largeur maximale : 800 px ; /* Limite la largeur de l'intro */
+largeur : 100 % ; /* Pour que l'intro prenne la largeur de l'écran jusqu'à la limite */
+}
+
+/* Nouveau style pour le rectangle avec le texte */
+.texte d'introduction {
+image d'arrière-plan : url('imgo1.jpg');
+taille de l'arrière-plan : couverture ;
+position d'arrière-plan : centre ;
+couleur : #ffffff;
+remplissage : 40 px ;
+rayon de la bordure : 12 px ;
+box-shadow : 0 0 20px rgba(0, 0, 0, 0.4); /* Ombre accentuée */
+transition : transformation 0,3 s ;
+largeur maximale : 700 px ; /* Limite la largeur du texte */
+marge : auto ; /* Centre le rectangle */
+}
+
+.texte d'introduction : hover {
+transformer : translateY(-5px);
+}
+
+/* Section des fonctionnalités */
+.caractéristiques {
+remplissage : 20 px ;
+couleur d'arrière-plan : rgba(226, 226, 226, 0,9) ; /* Teinte plus légère pour séparer les sections */
+rayon de la bordure : 12 px ;
+marge : 20px auto ;
+bordure : 2px solide #8b8b8b ;
+largeur maximale : 1 000 px ; /* Limite la largeur */
+largeur : 100 % ; /* Pour s'assurer qu'elle s'adapte */
+}
+
+/* Conteneur pour les fonctionnalités */
+.conteneur de fonctionnalités {
+affichage : flex ;
+flex-wrap : envelopper ;
+espace : 20 px ;
+justify-content: center; /* Centrer les éléments */
+aligner-éléments : démarrage flexible ;
+}
+
+/* Style pour chaque élément de fonctionnalité */
+.élément-fonctionnalité {
+arrière-plan : #d6d6d6 ; /* Couleur gris clair avec une texture de fond */
+remplissage : 20 px ;
+largeur : 220px ;
+rayon de bordure : 8 px ;
+alignement du texte : centre ;
+position : relative ;
+boîte-ombre : 0 0 8px rgba(0, 0, 0, 0.2);
+transition : transformation 0,2 s, ombre de boîte 0,2 s ;
+}
+
+.élément-fonctionnalité:hover {
+transformer : translateY(-5px);
+boîte-ombre : 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Style pour les flèches */
+.flèche {
+taille de police : 2 em ;
+marge : 0 10px ;
+couleur : #7e7e7e ; /* Gris moyen pour contraste */
+}
+
+/* Description de chaque fonctionnalité */
+.description {
+affichage : aucun ;
+taille de police : 0,9 em ;
+couleur : #333;
+position : absolue ;
+bas : -40px ;
+gauche : 50 % ;
+transformer : translateX(-50%);
+arrière-plan : #ffffff;
+rembourrage : 8px 12px ;
+bordure : 1px solide #ccc ;
+rayon de bordure : 5 px ;
+boîte-ombre : 0px 4px 10px rgba(0, 0, 0, 0.1);
 largeur : 90 % ;
-largeur maximale : 800 px ;
-transition : arrière-plan 0,4 s, couleur 0,4 s ;
 }
 
-corps.thème sombre .intro,
-corps.thème sombre.fonctionnalités,
-corps.thème sombre .conteneur de discussion,
-corps.thème sombre .profil utilisateur {
-couleur d'arrière-plan : var(--card-dark);
-boîte-ombre : 0 2px 8px var(--shadow-dark);
+/* Affichage de la description sur le survol */
+.élément-fonctionnalité : hover .description {
+affichage : bloc ;
 }
 
-.texte d'introduction h2 {
+/* Style pour le profil utilisateur */
+.profil-utilisateur {
+couleur d'arrière-plan : #fff ;
+remplissage : 25 px ;
+rayon de la bordure : 12 px ;
+alignement du texte : centre ;
+boîte-ombre : 0px 0px 8px rgba(0, 0, 0, 0.2);
+marge : 20px auto ;
+largeur : 90 % ;
+largeur maximale : 320 px ;
+}
+
+/* Style pour l'image de profil */
+.image de profil utilisateur {
+largeur : 120px ;
+hauteur : 120px ;
+rayon de bordure : 50 % ;
 marge inférieure : 10 px ;
 }
 
-#pagination {
-marge supérieure : 15 px ;
-alignement du texte : centre ;
+/* Style pour le nom de l'utilisateur */
+.profil utilisateur h2 {
+taille de police : 1,6 em ;
+couleur : #333;
+marge : 10px 0 ;
 }
 
-#bouton de pagination {
-couleur d'arrière-plan : var(--accent-light);
-couleur : blanc;
-bordure : aucune ;
-rembourrage : 8px 12px ;
-marge : 0 5px ;
+/* Style pour le bouton de message */
+.profil utilisateur .message-btn {
+couleur d'arrière-plan : #4e4e4e ;
+couleur : #ffffff;
+remplissage : 12px 18px ;
 rayon de bordure : 5 px ;
-curseur : pointeur ;
-transition : couleur d'arrière-plan 0,3 s ;
+décoration de texte : aucune ;
+affichage : bloc en ligne ;
+marge supérieure : 10 px ;
+transition : couleur d'arrière-plan 0,3 s, transformation 0,3 s ;
 }
 
-bouton body.dark-theme #pagination {
-couleur d'arrière-plan : var(--accent-dark);
+.profil utilisateur .message-btn:hover {
+couleur d'arrière-plan : #2b2b2b ;
+transformer : échelle(1,05);
 }
 
+/* Style pour le conteneur de chat */
+.conteneur de chat {
+largeur : 90 % ;
+largeur maximale : 600 px ;
+marge : 20px auto ;
+couleur d'arrière-plan : #fff ;
+rayon de la bordure : 12 px ;
+boîte-ombre : 0px 0px 8px rgba(0, 0, 0, 0.3);
+remplissage : 25 px ;
+}
+
+/* Style pour la zone de chat */
 .boîte de discussion {
-couleur d'arrière-plan : #f0f0f0 ;
 hauteur : 200px ;
 débordement-y : auto ;
 marge inférieure : 10 px ;
-remplissage : 10 px ;
-rayon de bordure : 6 px ;
+bordure : 1px solide #ccc ;
+remplissage : 12 px ;
+rayon de bordure : 5 px ;
+couleur d'arrière-plan : #f9f9f9 ;
+boîte-ombre : insertion 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Style pour le formulaire de chat */
 .chat-form input[type="text"] {
-largeur : 70 % ;
-remplissage : 10 px ;
-marge droite : 10 px ;
-rayon de bordure : 6 px ;
+largeur : 75 % ;
+remplissage : 12 px ;
+rayon de bordure : 5 px ;
 bordure : 1px solide #ccc ;
+transition : couleur de bordure 0,3 s ;
+}
+
+.chat-form input[type="text"]:focus {
+couleur de bordure : #4e4e4e ;
 }
 
 .bouton de formulaire de discussion {
-remplissage : 10px 15px ;
-couleur d'arrière-plan : var(--accent-light);
-couleur : blanc;
+largeur : 20 % ;
+remplissage : 12 px ;
+couleur d'arrière-plan : #4e4e4e ;
+couleur : #fff;
+rayon de bordure : 5 px ;
 bordure : aucune ;
-rayon de bordure : 6 px ;
 curseur : pointeur ;
+transition : couleur d'arrière-plan 0,3 s, transformation 0,3 s ;
 }
 
-.image de profil utilisateur {
-largeur : 100px ;
-rayon de bordure : 50 % ;
-marge inférieure : 15 px ;
+.bouton de formulaire de discussion : hover {
+couleur d'arrière-plan : #2b2b2b ;
+transformer : échelle(1,05);
 }
